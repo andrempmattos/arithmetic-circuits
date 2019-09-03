@@ -79,7 +79,9 @@ architecture Behavioral of Versatile_Adder is
 	InputA_Adder_s(6) <= Input_Vector(2);
 	InputB_Adder_s(6) <= Input_Vector(3) and Operation_Control;
 	
-	InputA_Adder_s(7) <= Operation_Control;
-	InputB_Adder_s(7) <= Input_Vector(3) or Operation_Control;
+	InputA_Adder_s(7) <= Input_Vector(3) or Operation_Control;
+	InputB_Adder_s(7) <= Operation_Control;
+	
+	
 
 end architecture;
