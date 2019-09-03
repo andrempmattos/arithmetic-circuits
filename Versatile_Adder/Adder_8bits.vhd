@@ -6,7 +6,6 @@ entity Adder_8bits is
 		Input_Vector_A: in std_logic_vector(7 downto 0);
 		Input_Vector_B: in std_logic_vector(7 downto 0);
 		Carry_In: in std_logic;
-		Carry_Out: out std_logic;
 		Output_Vector: out std_logic_vector(8 downto 0)
 	);
 end entity;
