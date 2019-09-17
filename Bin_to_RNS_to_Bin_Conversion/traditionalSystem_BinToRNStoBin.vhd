@@ -137,12 +137,12 @@ add_2n_p1: adder_2n_mp_1	generic map	(  n => n , modo => 1)
   end block;
 
   Display7SegA:
-	Decod7seg port map ( C => Output_Vector(n-1 downto 0), F => HEX0(n-1 downto 0)); 
+	Decod7seg port map ( C => Output_Vector(n-1 downto 0), F => HEX0(6 downto 0)); 
   Display7SegB:
-	Decod7seg port map ( C => Output_Vector(2*n-1 downto n), F => HEX1(2*n-1 downto n));  
+	Decod7seg port map ( C => Output_Vector(2*n-1 downto n), F => HEX1(6 downto 0));  
   Display7SegC:	
-	Decod7seg port map ( C => Output_Vector(3*n-1 downto 2*n), F => HEX2(3*n-1 downto 2*n));  
+	Decod7seg port map ( C => Output_Vector(3*n-1 downto 2*n), F => HEX2(6 downto 0));  
   Display7SegD:	
-	Decod7seg port map ( C => Output_Vector(4*n-1 downto 3*n), F => HEX3(4*n-1 downto 3*n));   
+	Decod7seg port map ( C => Output_Vector(4*n-1 downto 3*n), F => HEX3(6 downto 0));   
 
 end Structural;
