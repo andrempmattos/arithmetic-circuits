@@ -87,7 +87,7 @@ comp0_2n_m1: CSA_2n_mp_1	generic map	(  n => n , modo => 0)
 comp1_2n_m1: CSA_2n_mp_1	generic map	(  n => n , modo => 0)
 	                       port map ( I0 => sum0_2n_m1, I1 => carry0_2n_m1, I2 => SW(4*n-1 downto 3*n), S =>sum1_2n_m1 , C =>carry1_2n_m1); 
 add_2n_m1: adder_2n_mp_1	generic map	(  n => n , modo => 0)
-	                       port map ( A => sum1_2n_m1, B => carry1_2n_m1, S =>LEDR(3*n-1 downto 2*n) , C => open); 
+	                       port map ( A => sum1_2n_m1, B => carry1_2n_m1, S =>LEDR(3*n-1 downto 2*n) , Cout => open); 
 
 
 comp0_2n_p1: CSA_2n_mp_1	generic map	(  n => n , modo => 1)
@@ -97,7 +97,7 @@ comp1_2n_p1: CSA_2n_mp_1	generic map	(  n => n , modo => 1)
 comp2_2n_p1: CSA_2n_mp_1	generic map	(  n => n , modo => 1)
 	                       port map ( I0 => sum1_2n_p1, I1 => carry1_2n_p1, I2 => zeros, S =>sum2_2n_p1 , C =>carry2_2n_p1); 
 add_2n_p1: adder_2n_mp_1	generic map	(  n => n , modo => 1)
-	                       port map ( A => sum2_2n_m1, B => carry2_2n_m1, S =>LEDR(4*n-1 downto 3*n) , C => LEDR(16));  
+	                       port map ( A => sum2_2n_p1, B => carry2_2n_p1, S =>LEDR(4*n-1 downto 3*n) , Cout => LEDR(16));  
 
 end block;
 
