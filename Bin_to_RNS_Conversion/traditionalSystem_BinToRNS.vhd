@@ -75,7 +75,7 @@ signal notSW : std_logic_vector(4*n-1 downto 0);
 begin
 	-- enter your statements here -- 
 zeros <= (others =>'0');	
-notSW(4*n-1 downto 0) <= not(SW(4*n-1 downto 0));
+notSW(4*n-1 downto 0) <= not SW(4*n-1 downto 0);
 
 converter : block
 
